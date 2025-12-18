@@ -46,13 +46,16 @@ def create_wordcloud(selected_user, df):
     wc = WordCloud(width=500, height=500, min_font_size=10, background_color='white')
     temp = temp.copy()
     temp['message'] = temp['message'].apply(remove_stop_words)
-    df_wc = wc.generate(
+    text = (
     temp['message']
     .dropna()
     .astype(str)
     .str.cat(sep=" ")
     )
+    if text.strip() == "":
+        return None 
 
+    df_wc = wc.generate(text)
     return df_wc
 def most_common_words(selected_user,df):
    # most used words by a particular person
