@@ -46,15 +46,16 @@ https://chatscope-whatsapp.streamlit.app
 
 ## 📂 Project Structure
 
-├── app.py # Streamlit application
-├── helper.py # Analytics & visualization helpers
-├── preprocessor.py # Chat preprocessing logic
-├── requirements.txt # Project dependencies
-├── stop_hinglish.txt # Stop words list
-├── sample_chat.txt # Sample WhatsApp chat (optional)
-├── dashboard.png # App screenshot
+```
+├── app.py              # Streamlit application
+├── helper.py           # Analytics & visualization helpers
+├── preprocessor.py     # Chat preprocessing logic
+├── requirements.txt    # Project dependencies
+├── stop_hinglish.txt   # Stop words list
+├── sample_chat.txt     # Sample WhatsApp chat (optional)
+├── dashboard.png       # App screenshot
 └── README.md
-
+```
 ---
 
 ## ▶️ Run Locally
@@ -71,6 +72,7 @@ pip install -r requirements.txt
 
 # Run the Streamlit app
 streamlit run app.py
+```
 
 🎯 Use Cases
 
