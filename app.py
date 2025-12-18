@@ -17,7 +17,9 @@ if uploaded_file is not None:
     #fetch unique user 
     user_list=df['user'].unique().tolist()
     #there are other non user like group notification and Meta AI
-    user_list.remove('group_notification')
+    if 'group_notification' in user_list:
+        user_list.remove('group_notification')
+
     if 'Meta AI' in user_list:
         user_list.remove('Meta AI')
 
