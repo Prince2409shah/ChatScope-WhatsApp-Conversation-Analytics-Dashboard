@@ -7,10 +7,11 @@ def preprocess(data):
     # Create DataFrame
     df = pd.DataFrame({'user_message': messages, 'message_date': dates})
     df['message_date'] = pd.to_datetime(
-        df['message_date'].str.replace('-', '', regex=False).str.strip(),
+        df['message_date'].astype(str).str.replace('-', '', regex=False).str.strip(),
         format='%d/%m/%y, %H:%M',
         errors='coerce'
     )
+
     df.rename(columns={'message_date': 'date'}, inplace=True)
     # separate users and messages
     users = []
